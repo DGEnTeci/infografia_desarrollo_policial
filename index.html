@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Psicología del Desarrollo Policial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f6;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-[#1E1B18]">
+
+    <header class="bg-[#006633] text-white p-6 md:p-8 shadow-lg">
+        <h1 class="text-3xl md:text-4xl font-bold text-center">Psicología del Desarrollo Aplicada a la Labor Policial</h1>
+        <p class="text-center text-lg md:text-xl text-gray-200 mt-2">El Impacto del Humanismo: Inteligencia Emocional y Liderazgo Holístico</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4 md:p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
+            <div class="bg-white rounded-lg shadow-xl p-6 flex flex-col">
+                <h2 class="text-2xl font-bold text-[#006633] mb-3">1. Inteligencia Emocional (IE): El Pilar del Liderazgo</h2>
+                <p class="text-gray-700 mb-4">La Inteligencia Emocional es la capacidad de reconocer, comprender y gestionar las emociones propias y ajenas. Es la base fundamental del Modelo Holístico de Liderazgo Policial, permitiendo al líder actuar con coherencia y humanidad.</p>
+                <div class="chart-container flex-grow">
+                    <canvas id="ieChart"></canvas>
+                </div>
+                <p class="text-gray-600 mt-4 text-sm">El dominio de estos 5 componentes permite al líder pensar claramente bajo presión, gestionar el estrés y fomentar la innovación y productividad en su equipo.</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-xl p-6 flex flex-col">
+                <h2 class="text-2xl font-bold text-[#006633] mb-3">2. Relaciones Saludables: El Núcleo de la Cohesión</h2>
+                <p class="text-gray-700 mb-4">Son vínculos profesionales basados en el respeto, la confianza y la comunicación asertiva. En un entorno de alta presión, son un factor protector clave contra el estrés y el aislamiento.</p>
+                <div class="chart-container flex-grow">
+                    <canvas id="relationsChart"></canvas>
+                </div>
+                <p class="text-gray-600 mt-4 text-sm">Un equilibrio en estas áreas reduce los conflictos internos, previene el autoritarismo y mejora la eficacia operativa y la confianza mutua.</p>
+            </div>
+
+            <div class="md:col-span-2 bg-white rounded-lg shadow-xl p-6">
+                <h2 class="text-2xl font-bold text-[#006633] mb-4 text-center">Impacto Estratégico del Desarrollo Humano</h2>
+                <p class="text-gray-700 mb-6 text-center max-w-3xl mx-auto">El desarrollo de estas habilidades socioemocionales no es solo teórico; tiene un impacto directo y medible en la efectividad del servicio policial y el bienestar del uniformado.</p>
+                <div class="flex flex-col md:flex-row justify-around items-center text-center gap-6">
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-inner w-full md:w-1/4">
+                        <span class="text-5xl font-bold text-[#5cb85c]">🧠</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2">Piensa bajo Presión</h3>
+                        <p class="text-gray-600">Mejora la conciencia situacional y la toma de decisiones.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-inner w-full md:w-1/4">
+                        <span class="text-5xl font-bold text-[#5cb85c]">⬇️</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2">Reduce el 'Burnout'</h3>
+                        <p class="text-gray-600">Actúa como factor protector contra el estrés crónico.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-inner w-full md:w-1/4">
+                        <span class="text-5xl font-bold text-[#5cb85c]">🤝</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2">Previene Abusos</h3>
+                        <p class="text-gray-600">La empatía previene el uso excesivo de la fuerza.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-inner w-full md:w-1/4">
+                        <span class="text-5xl font-bold text-[#5cb85c]">📈</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2">Genera Confianza</h3>
+                        <p class="text-gray-600">Fortalece la legitimidad policial ante la comunidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 bg-white rounded-lg shadow-xl p-6">
+                <h2 class="text-2xl font-bold text-[#006633] mb-3">3. Aplicación Práctica: Proceso de Mediación Policial</h2>
+                <p class="text-gray-700 mb-6">Así es como la IE y las Habilidades Sociales se convierten en una herramienta táctica para el rol pacificador y preventivo del policía, reduciendo la judicialización innecesaria.</p>
+                
+                <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-2 justify-between items-center text-center">
+                    
+                    <div class="bg-gray-100 border-t-4 border-[#006633] rounded-lg p-3 shadow-md w-full md:w-1/6">
+                        <h3 class="font-bold text-base text-[#006633]">1. Escucha Activa</h3>
+                        <p class="text-sm text-gray-600">Comprender el problema real.</p>
+                    </div>
+                    
+                    <div class="text-2xl text-[#5cb85c] transform rotate-90 md:rotate-0">&rarr;</div>
+
+                    <div class="bg-gray-100 border-t-4 border-[#006633] rounded-lg p-3 shadow-md w-full md:w-1/6">
+                        <h3 class="font-bold text-base text-[#006633]">2. Neutralidad</h3>
+                        <p class="text-sm text-gray-600">Control emocional y empatía.</p>
+                    </div>
+                    
+                    <div class="text-2xl text-[#5cb85c] transform rotate-90 md:rotate-0">&rarr;</div>
+
+                    <div class="bg-gray-100 border-t-4 border-[#006633] rounded-lg p-3 shadow-md w-full md:w-1/6">
+                        <h3 class="font-bold text-base text-[#006633]">3. Reformulación</h3>
+                        <p class="text-sm text-gray-600">Quitar carga emocional.</p>
+                    </div>
+
+                    <div class="text-2xl text-[#5cb85c] transform rotate-90 md:rotate-0">&rarr;</div>
+
+                    <div class="bg-gray-100 border-t-4 border-[#006633] rounded-lg p-3 shadow-md w-full md:w-1/6">
+                        <h3 class="font-bold text-base text-[#006633]">4. Intereses Comunes</h3>
+                        <p class="text-sm text-gray-600">Enfocar en la convivencia.</p>
+                    </div>
+
+                    <div class="text-2xl text-[#5cb85c] transform rotate-90 md:rotate-0">&rarr;</div>
+
+                    <div class="bg-gray-100 border-t-4 border-[#006633] rounded-lg p-3 shadow-md w-full md:w-1/6">
+                        <h3 class="font-bold text-base text-[#006633]">5. Generar Opciones</h3>
+                        <p class="text-sm text-gray-600">Las partes proponen.</p>
+                    </div>
+
+                    <div class="text-2xl text-[#5cb85c] transform rotate-90 md:rotate-0">&rarr;</div>
+
+                    <div class="bg-gray-100 border-t-4 border-[#006633] rounded-lg p-3 shadow-md w-full md:w-1/6">
+                        <h3 class="font-bold text-base text-[#006633]">6. Cierre y Acuerdo</h3>
+                        <p class="text-sm text-gray-600">Formalizar compromisos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="md:col-span-2 bg-[#006633] text-white rounded-lg shadow-xl p-8 text-center">
+                <p class="text-xl italic font-medium">"Una institución policial fuerte no se construye solo con disciplina y jerarquía, sino también con vínculos humanos saludables que garanticen la dignidad, el respeto y la solidaridad entre sus miembros."</p>
+                <p class="text-lg font-semibold mt-2">- Adaptado del Lineamiento Humanista MTI</p>
+            </footer>
+
+        </div>
+    </main>
+
+    <script>
+        const colors = {
+            primary: '#006633', // Verde Oscuro Institucional
+            secondary: '#5cb85c', // Verde Brillante/Acento
+            text: '#1E1B18',
+            accent: '#D8D8D8',
+            white: '#FFFFFF'
+        };
+
+        const wrapLabel = (label, maxWidth = 16) => {
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+
+            words.forEach((word) => {
+                const testLine = currentLine.length > 0 ? `${currentLine} ${word}` : word;
+                if (testLine.length > maxWidth) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = testLine;
+                }
+            });
+            lines.push(currentLine);
+            return lines;
+        };
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+        
+        const commonOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: '#000',
+                    titleFont: { size: 14 },
+                    bodyFont: { size: 12 },
+                    padding: 10,
+                    cornerRadius: 4
+                },
+                legend: {
+                    labels: {
+                        color: colors.text,
+                        font: {
+                            size: 12
+                        },
+                        padding: 15,
+                        boxWidth: 15
+                    }
+                }
+            }
+        };
+
+        const ieLabels = [
+            'Autoconocimiento',
+            'Autocontrol',
+            'Motivación',
+            'Empatía',
+            'Habilidades Sociales'
+        ].map(label => wrapLabel(label, 14));
+
+        const ieCtx = document.getElementById('ieChart').getContext('2d');
+        new Chart(ieCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ieLabels,
+                datasets: [{
+                    label: 'Pilares de la IE',
+                    data: [20, 20, 20, 20, 20],
+                    backgroundColor: [
+                        'rgba(92, 184, 92, 0.9)',
+                        'rgba(0, 102, 51, 0.9)',
+                        'rgba(92, 184, 92, 0.7)',
+                        'rgba(0, 102, 51, 0.7)',
+                        'rgba(92, 184, 92, 1)'
+                    ],
+                    borderColor: colors.white,
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                ...commonOptions,
+                plugins: {
+                    ...commonOptions.plugins,
+                    legend: {
+                        ...commonOptions.plugins.legend,
+                        position: 'bottom'
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+
+        const relationsLabels = [
+            'Respeto',
+            'Comunicación Asertiva',
+            'Colaboración',
+            'Límites Sanos',
+            'Empatía'
+        ].map(label => wrapLabel(label));
+
+        const relationsCtx = document.getElementById('relationsChart').getContext('2d');
+        new Chart(relationsCtx, {
+            type: 'radar',
+            data: {
+                labels: relationsLabels,
+                datasets: [{
+                    label: 'Equilibrio de Relaciones',
+                    data: [5, 4, 5, 3, 4],
+                    backgroundColor: 'rgba(92, 184, 92, 0.2)',
+                    borderColor: 'rgba(92, 184, 92, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(92, 184, 92, 1)',
+                    pointBorderColor: colors.white,
+                    pointHoverBackgroundColor: colors.white,
+                    pointHoverBorderColor: 'rgba(92, 184, 92, 1)'
+                }]
+            },
+            options: {
+                ...commonOptions,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        angleLines: {
+                            color: colors.accent
+                        },
+                        grid: {
+                            color: colors.accent
+                        },
+                        pointLabels: {
+                            color: colors.text,
+                            font: {
+                                size: 12,
+                                weight: '600'
+                            }
+                        },
+                        ticks: {
+                            display: false,
+                            maxTicksLimit: 6
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 5
+                    }
+                },
+                plugins: {
+                    ...commonOptions.plugins,
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
